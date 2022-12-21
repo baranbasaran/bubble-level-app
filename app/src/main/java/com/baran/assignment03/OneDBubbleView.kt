@@ -30,6 +30,10 @@ class OneDBubbleView @JvmOverloads constructor(
             invalidate()
         }
 
+    // working range of the bubble level, in degrees
+    private val minAngle = -10f
+    private val maxAngle = 10f
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
@@ -40,16 +44,20 @@ class OneDBubbleView @JvmOverloads constructor(
         // draw the line
         canvas.drawLine(centerX - 100, centerY, centerX + 100, centerY, linePaint)
 
+        // clamp the angle to the working range
+        val clampedAngle = angle.coerceIn(minAngle, maxAngle)
+
         // calculate the x coordinate of the bubble based on the angle
         val bubbleRadius = 50f
-        val bubbleX = centerX + angle / 20 * 100
+        val bubbleX = centerX + clampedAngle / 20 * 100
 
         // draw the bubble
         canvas.drawCircle(bubbleX, centerY, bubbleRadius, bubblePaint)
 
         // Draw angle text
-        val text = "${angle.toInt()}°"
+        val text = "${clampedAngle.toInt()}°"
         val textWidth = textPaint.measureText(text)
         canvas.drawText(text, centerX - textWidth / 2, centerY - bubbleRadius - 10, textPaint)
     }
 }
+
