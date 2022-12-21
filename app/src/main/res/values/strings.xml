@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">assignment03</string>
+    <string name="min_value_format">Min Value</string>
+    <string name="max_value_format">Max Value</string>
 </resources>

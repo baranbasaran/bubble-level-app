@@ -6,24 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/txtView"
+    <com.baran.assignment03.OneDBubbleView
+        android:id="@+id/oneDBubble_level_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/twoDBubble_level_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.baran.assignment03.TwoDBubbleView
+        android:id="@+id/twoDBubble_level_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <com.baran.assignment03.OneDBubbleView
-        android:id="@+id/bubble_level_view"
+        app:layout_constraintTop_toBottomOf="@id/oneDBubble_level_view"/>
+
+    <TextView
+        android:id="@+id/min_value_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/min_value_format"
+        app:layout_constraintBottom_toTopOf="@id/max_value_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/oneDBubble_level_view"/>
+
+    <TextView
+        android:id="@+id/max_value_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/max_value_format"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/min_value_text_view"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
