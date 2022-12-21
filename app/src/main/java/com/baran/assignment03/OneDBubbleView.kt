@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
-import kotlin.math.abs
 
 class OneDBubbleView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -24,6 +23,7 @@ class OneDBubbleView @JvmOverloads constructor(
         textSize = 36f
     }
 
+    // angle at which the bubble is drawn
     var angle: Float = 0f
         set(value) {
             field = value
@@ -33,15 +33,18 @@ class OneDBubbleView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
+        // get the center x and y coordinates of the view
         val centerX = width / 2f
         val centerY = height / 2f
 
-        // Draw line
+        // draw the line
         canvas.drawLine(centerX - 100, centerY, centerX + 100, centerY, linePaint)
 
-        // Draw bubble
+        // calculate the x coordinate of the bubble based on the angle
         val bubbleRadius = 50f
         val bubbleX = centerX + angle / 20 * 100
+
+        // draw the bubble
         canvas.drawCircle(bubbleX, centerY, bubbleRadius, bubblePaint)
 
         // Draw angle text

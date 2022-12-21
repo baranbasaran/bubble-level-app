@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">assignment03</string>
-    <string name="min_value_format">Min Value</string>
-    <string name="max_value_format">Max Value</string>
+    <string name="min_value_format">min Value</string>
+    <string name="max_value_format">max Value</string>
+    <string name="min_roll_format">minXAngle</string>
+    <string name="max_roll_format">maxXAngle</string>
+    <string name="min_pitch_format">minYAngle</string>
+    <string name="max_pitch_format">maxYAngle</string>
 </resources>
