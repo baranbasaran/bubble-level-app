@@ -26,59 +26,107 @@
         app:layout_constraintTop_toBottomOf="@id/oneDBubble_level_view"/>
 
     <TextView
-        android:id="@+id/min_value_text_view"
-        android:layout_width="match_parent"
+        android:id="@+id/min_value_label"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/min_value_format"
+        android:text="@string/min_value_label"
         app:layout_constraintBottom_toTopOf="@id/max_value_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/oneDBubble_level_view"/>
-
+    <TextView
+        android:id="@+id/min_value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min_value_text_view"
+        app:layout_constraintBottom_toTopOf="@id/max_value_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/min_value_label"
+        app:layout_constraintTop_toBottomOf="@id/oneDBubble_level_view"/>
+    <TextView
+        android:id="@+id/max_value_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/max_value_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/min_value_text_view"/>
     <TextView
         android:id="@+id/max_value_text_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/max_value_format"
+        android:text="@string/max_value_text_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/max_value_label"
         app:layout_constraintTop_toBottomOf="@id/min_value_text_view"/>
 
     <TextView
-        android:id="@+id/min_roll_txt_vw"
+        android:id="@+id/min_roll_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/min_roll_format"
+        android:text="@string/min_roll_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/min_roll_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min_roll_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/min_roll_label"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <TextView
+        android:id="@+id/max_roll_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/max_roll_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/min_roll_text_view"/>
     <TextView
         android:id="@+id/max_roll_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/max_roll_format"
+        android:text="@string/max_roll_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/max_roll_label"
+        app:layout_constraintTop_toBottomOf="@id/min_roll_text_view"/>
+
+    <TextView
+        android:id="@+id/min_pitch_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/min_pitch_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/min_roll_txt_vw"/>
-
+        app:layout_constraintTop_toBottomOf="@id/max_roll_text_view"/>
     <TextView
         android:id="@+id/min_pitch_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/min_pitch_format"
+        android:text="@string/min_pitch_text_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/min_pitch_label"
         app:layout_constraintTop_toBottomOf="@id/max_roll_text_view"/>
 
+    <TextView
+        android:id="@+id/max_pitch_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/max_pitch_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/min_pitch_text_view"/>
     <TextView
         android:id="@+id/max_pitch_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/max_pitch_format"
+        android:text="@string/max_pitch_text_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/max_pitch_label"
         app:layout_constraintTop_toBottomOf="@id/min_pitch_text_view"/>
 
 

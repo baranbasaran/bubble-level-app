@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
         magnetometer = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
-        minRollTextView = findViewById(R.id.min_roll_txt_vw)
+        minRollTextView = findViewById(R.id.min_roll_text_view)
         maxRollTextView = findViewById(R.id.max_roll_text_view)
         minPitchTextView = findViewById(R.id.min_pitch_text_view)
         maxPitchTextView = findViewById(R.id.max_pitch_text_view)

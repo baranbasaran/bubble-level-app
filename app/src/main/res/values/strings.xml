@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">assignment03</string>
-    <string name="min_value_format">min Value</string>
-    <string name="max_value_format">max Value</string>
-    <string name="min_roll_format">minXAngle</string>
-    <string name="max_roll_format">maxXAngle</string>
-    <string name="min_pitch_format">minYAngle</string>
-    <string name="max_pitch_format">maxYAngle</string>
+    <string name="min_value_text_view">min Value</string>
+    <string name="max_value_text_view">max Value</string>
+    <string name="min_roll_text_view">minXAngle</string>
+    <string name="max_roll_text_view">maxXAngle</string>
+    <string name="min_value_label">Minimum Accelerometer/MagnetometerValues:</string>
+    <string name="max_value_label">Maximum Accelerometer/MagnetometerValues:</string>
+    <string name="min_roll_label">Minimum roll:</string>
+    <string name="max_roll_label">Maximum roll:</string>
+    <string name="min_pitch_label">Minimum pitch:</string>
+    <string name="min_pitch_text_view">minYAngle</string>
+    <string name="max_pitch_text_view">maxYAngle</string>
+    <string name="max_pitch_label">Maximum pitch:</string>
+
 </resources>
