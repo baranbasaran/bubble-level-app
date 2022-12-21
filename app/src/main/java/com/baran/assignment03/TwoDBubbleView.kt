@@ -17,11 +17,11 @@ class TwoDBubbleView @JvmOverloads constructor(
     }
     private val linePaint = Paint().apply {
         color = Color.BLACK
-        strokeWidth = 3f
+        strokeWidth = 4f
     }
     private val textPaint = Paint().apply {
         color = Color.BLACK
-        textSize = 36f
+        textSize = 40f
     }
 
     var xAngle: Float = 0f
@@ -35,6 +35,7 @@ class TwoDBubbleView @JvmOverloads constructor(
             field = value
             invalidate()
         }
+
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
@@ -61,5 +62,7 @@ class TwoDBubbleView @JvmOverloads constructor(
         val yTextWidth = textPaint.measureText(yText)
         canvas.drawText(xText, centerX - xTextWidth / 2, centerY - bubbleRadius - 10, textPaint)
         canvas.drawText(yText, centerX + bubbleRadius + 10, centerY - yTextWidth / 2, textPaint)
+
+
     }
 }
